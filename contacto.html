@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Esamanz</title>
+<meta name="description" content="Conversemos sobre tu proyecto. Escríbele directo a Esamanz.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.svg" alt="Esamanz" class="brand__mark" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="brand__mark--fallback" style="display:none;"></span>
+      esamanz
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html" class="nav-cta is-active" style="background: var(--ink-navy); color: var(--paper);">Hablemos →</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Navegación móvil">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Hablemos →</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero container">
+    <p class="eyebrow"><span class="node-divider__dot node-divider__dot--red" style="width:6px;height:6px;"></span>Contacto</p>
+    <h1 class="hero__title" style="max-width: 16ch;">Conversemos sobre tu proyecto.</h1>
+    <p class="hero__lead">Cuéntanos qué necesitas resolver. Respondemos directamente, sin intermediarios.</p>
+  </section>
+
+  <section class="section container reveal" style="padding-top: 0;">
+    <div class="contact-layout">
+
+      <!-- Formulario -->
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+        </div>
+        <div class="field">
+          <label for="email">Correo</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+        </div>
+        <div class="field">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="Cuéntanos brevemente qué necesitas..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+        <p class="form-note" id="form-status">Al enviar, se abrirá tu cliente de correo con el mensaje precargado.</p>
+      </form>
+
+      <!-- Info directa -->
+      <div>
+        <div class="card" style="background: var(--ink-navy); border: none; color: var(--text-on-dark);">
+          <div class="contact-info__item">
+            <span class="contact-info__label">Correo</span>
+            <span class="contact-info__value"><a href="mailto:contacto@esamanz.com">contacto@esamanz.com</a></span>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__label">Teléfono / WhatsApp</span>
+            <span class="contact-info__value"><a href="tel:+18090000000">+1 (809) 000-0000</a></span>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__label">Ubicación</span>
+            <span class="contact-info__value">Santo Domingo, República Dominicana</span>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__label">Horario</span>
+            <span class="contact-info__value">Lunes a viernes, 9:00 a.m. – 6:00 p.m.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <span class="brand__mark--fallback" style="display:block;"></span>
+          esamanz
+        </div>
+        <p class="footer-tagline">La tecnología explicada como se debe: sin perder profundidad, sin perder al cliente.</p>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-nav-col">
+          <h4>Sitio</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:contacto@esamanz.com">contacto@esamanz.com</a></li>
+            <li><a href="tel:+18090000000">+1 (809) 000-0000</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="node-divider" style="margin-block: 0 1.5rem;">
+      <span class="node-divider__line"></span>
+      <span class="node-divider__dot"></span>
+      <span class="node-divider__line"></span>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Esamanz. Todos los derechos reservados.</span>
+      <span>Santo Domingo, República Dominicana</span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+</body>
+</html>
